@@ -7,6 +7,8 @@ let date = Date.now();
 date += 1 * 86400000
 console.log(date)
 console.log(auth)
+console.log(process.env.AUTH)
+console.log(process.env.name)
 let aulaUrls = []
 // get day aulas
 let config = {
