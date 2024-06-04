@@ -5,6 +5,8 @@ const auth = process.env.AUTH
 let date = Date.now();
 // plus 5 days
 date += 1 * 86400000
+console.log(date)
+console.log(auth)
 let aulaUrls = []
 // get day aulas
 let config = {
