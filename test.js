@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // user Auth
-const auth = 'xxxxxx'
+const auth = process.env.AUTH
 let date = Date.now();
 // plus 3 days
 date += 3 * 86400000
