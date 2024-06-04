@@ -1,5 +1,8 @@
 name: Book class
 on:
+  schedule:
+    - cron: '0 8 * * 3'  # Runs at 19:00 on Fridays (0 minute, 20 hour, any day of month, any month, wednesday (3))
+    - cron: '0 9 * * 3'  # Runs at 19:00 on Fridays (0 minute, 20 hour, any day of month, any month, Friday (5))
   push:
     branches:
       - "test-workflow"
