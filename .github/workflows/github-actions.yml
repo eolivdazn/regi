@@ -1,8 +1,8 @@
 name: Book class
 on:
   schedule:
-    - cron: '0 20 * * 3'  # Runs at 19:00 on Fridays (0 minute, 20 hour, any day of month, any month, wednesday (3))
-    - cron: '0 20 * * 5'  # Runs at 19:00 on Fridays (0 minute, 20 hour, any day of month, any month, Friday (5))
+    - cron: '0 21 * * 3'  # Runs at 20:00 on wednesday (0 minute, 20 hour, any day of month, any month, wednesday (3))
+    - cron: '0 21 * * 5'  # Runs at 20:00 on Fridays (0 minute, 20 hour, any day of month, any month, Friday (5))
 
 
 jobs:
@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'   
-        env:
-          AUTH: ${{ secrets.AUTH }}
+          node-version: '20.x'
       - run: npm ci
       - run: npm run book
+        env:
+          AUTH: ${{ secrets.AUTH }}
       
