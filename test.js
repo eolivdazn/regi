@@ -4,7 +4,7 @@ const axios = require('axios');
 const auth = process.env.AUTH
 let date = Date.now();
 // plus 5 days
-date += 5 * 86400000
+date += 1 * 86400000
 let aulaUrls = []
 // get day aulas
 let config = {
