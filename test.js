@@ -3,8 +3,8 @@ const axios = require('axios');
 // user Auth
 const auth = 'xxxxxx'
 let date = Date.now();
-// plus 4 days
-date += 4 * 86400000
+// plus 3 days
+date += 3 * 86400000
 let aulaUrls = []
 // get day aulas
 let config = {
