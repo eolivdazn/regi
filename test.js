@@ -42,7 +42,7 @@ axios.request(config)
    method: 'get',
    maxBodyLength: Infinity,
    //${aulaUrls[0] first class of the day
-   url: `https://www.regibox.pt/app/app_nova/php/aulas/marca_aulas.php?id_aula=${aulaUrls[0]}&z=${auth}`,
+   url: `https://www.regibox.pt/app/app_nova/php/aulas/marca_aulas.php?id_aula=${aulaUrls[9]}&z=${auth}`,
    headers: {
      'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
      'accept-language': 'en-US,en;q=0.9,gl;q=0.8,pt;q=0.7',
