@@ -6,7 +6,7 @@ let date = Date.now();
 // plus 4 days
 date += 4 * 86400000
 let aulaUrls = []
-
+// get day aulas
 let config = {
   method: 'post',
   maxBodyLength: Infinity,
