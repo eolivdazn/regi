@@ -1,8 +1,8 @@
 name: Book class
 on:
   schedule:
-    - cron: '0 21 * * 3'  # Runs at 20:00 on wednesday (0 minute, 20 hour, any day of month, any month, wednesday (3))
-    - cron: '0 21 * * 5'  # Runs at 20:00 on Fridays (0 minute, 20 hour, any day of month, any month, Friday (5))
+#    - cron: '0 21 * * 3,5'  # Runs at 20:00 on wednesday (0 minute, 20 hour, any day of month, any month, wednesday (3))
+    - cron: '*/5 * * * *'
 
 
 jobs:
