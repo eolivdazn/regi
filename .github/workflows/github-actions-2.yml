@@ -5,11 +5,11 @@ name: Book class
 #Month of the year [1,12]
 #Day of the week ([0,6] with 0=Sunday)
 on:
-#  schedule:
-#    - cron: '0 8,9 * * 5'  # Runs at 19:00 on Fridays (0 minute, 20 hour, any day of month, any month, wednesday (3))
-  push:
-    branches:
-      - "test-workflow"
+  schedule:
+    - cron: '30 20 * * *'  # Runs at 19:00 on Fridays (0 minute, 20 hour, any day of month, any month, wednesday (3))
+#  push:
+#    branches:
+#      - "test-workflow"
 
 
 jobs:
