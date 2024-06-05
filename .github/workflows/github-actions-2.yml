@@ -6,7 +6,7 @@ name: Book class
 #Day of the week ([0,6] with 0=Sunday)
 on:
   schedule:
-    - cron: '30 20 * * *'  # Runs at 19:00 on Fridays (0 minute, 20 hour, any day of month, any month, wednesday (3))
+    - cron: '*/5 * * * *'
 #  push:
 #    branches:
 #      - "test-workflow"
