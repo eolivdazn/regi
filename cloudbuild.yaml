@@ -9,5 +9,5 @@ steps:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/575043940322/secrets/AUTH
+    - versionName: projects/575043940322/secrets/AUTH/versions/latest
       env: 'AUTH'
