@@ -4,7 +4,7 @@ const axios = require('axios');
 const auth = process.env.AUTH
 let date = Date.now();
 // plus 5 days
-date += 5 * 86400000
+date += 1 * 86400000
 let aulaUrls = []
 // get day aulas
 let config = {
@@ -60,13 +60,13 @@ axios.request(config)
      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
    }
  };
- axios.request(configBook)
- .then((response) => {
-   console.log(JSON.stringify(response.data));
- })
- .catch((error) => {
-   console.log(error);
- });
+// axios.request(configBook)
+// .then((response) => {
+//   console.log(JSON.stringify(response.data));
+// })
+// .catch((error) => {
+//   console.log(error);
+// });
 
 })
 .catch((error) => {
