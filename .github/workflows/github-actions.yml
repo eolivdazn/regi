@@ -1,7 +1,7 @@
 name: Book class
 on:
   schedule:
-    - cron: '0 19 * * 3,5'  # Runs at 19:00 UTC on wednesday (0 minute, 20 hour, any day of month, any month, wednesday (3) and Friday (5))
+    - cron: '30 18 * * 3,5'  # Runs at 19:00 UTC on wednesday (0 minute, 20 hour, any day of month, any month, wednesday (3) and Friday (5))
 
 
 jobs:
