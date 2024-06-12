@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // user Auth
-const auth = '16d5fb620b831e8133ec14efc1fd247a121185b12bde85e05'
+const auth = process.env.AUTH
 let date = Date.now();
 // plus 5 days
 date += 5 * 86400000
