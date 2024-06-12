@@ -1,10 +1,11 @@
 const axios = require('axios');
 
 // user Auth
-const auth = process.env.AUTH
+const auth = '16d5fb620b831e8133ec14efc1fd247a121185b12bde85e05'
 let date = Date.now();
 // plus 5 days
 date += 5 * 86400000
+const stringWeekDayDate = new Date(date).toString().split(' ')[0]
 let aulaUrls = []
 // get day aulas
 let config = {
@@ -37,12 +38,15 @@ axios.request(config)
  for (const match of matches) {
      aulaUrls.push(match[1]);
  }
- console.log(aulaUrls)
+ console.log(aulaUrls,"List aulas")
+ console.log(stringWeekDayDate,"week day");
+ //${aulaUrls[0] first class of the day
+ const aulaId = stringWeekDayDate === 'Thu' ? aulaUrls[5] : aulaUrls[9]
+ console.log(aulaId)
  let configBook = {
    method: 'get',
    maxBodyLength: Infinity,
-   //${aulaUrls[0] first class of the day
-   url: `https://www.regibox.pt/app/app_nova/php/aulas/marca_aulas.php?id_aula=${aulaUrls[9]}&z=${auth}`,
+   url: `https://www.regibox.pt/app/app_nova/php/aulas/marca_aulas.php?id_aula=${aulaId}&z=${auth}`,
    headers: {
      'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
      'accept-language': 'en-US,en;q=0.9,gl;q=0.8,pt;q=0.7',
