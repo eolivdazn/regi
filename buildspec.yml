@@ -5,6 +5,10 @@ phases:
   install:
     runtime-versions:
       nodejs: 21
+  pre_build:
+    commands:
+      # export the env variables
+      - echo AUTH=${AUTH} >> .env
   build:
     commands:
       - echo Run.
