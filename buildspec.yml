@@ -5,7 +5,7 @@ phases:
   install:
     runtime-versions:
       nodejs: 21
-  test:
+  build:
     commands:
       - echo Run.
       - npm install
