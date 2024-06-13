@@ -3,6 +3,7 @@ const axios = require('axios');
 // user Auth
 const auth = process.env.AUTH
 let date = Date.now();
+console.log(date,"date.now")
 // plus 5 days
 date += 5 * 86400000
 const stringWeekDayDate = new Date(date).toString().split(' ')[0]
