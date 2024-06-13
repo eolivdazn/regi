@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: eventBridgeCloudformation
+
+Resources:
+  myStack:
+    Type: AWS::Scheduler::Schedule
+    Properties:
+      Description: 'test'
+      FlexibleTimeWindow:
+        MaximumWindowInMinutes: 1,
+        Mode: 'FLEXIBLE'
+      Name: 'cloudformation'
+      ScheduleExpression: 'cron(30 19 ? * 4,6 *)'
+      ScheduleExpressionTimezone: 'UTC+1'
+      Target:
+        'arn:aws:scheduler:us-east-2:151337330784:schedule/default/trigger-pipeline'
