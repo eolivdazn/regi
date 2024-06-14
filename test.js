@@ -8,6 +8,7 @@ console.log(date,"date.now")
 console.log(daysInAdvance,"daysInAdvance")
 // plus 5 days
 date +=  daysInAdvance * 86400000
+console.log(date,"class day")
 const stringWeekDayDate = new Date(date).toString().split(' ')[0]
 let aulaId = ''
 let aulaUrls = []
