@@ -7,6 +7,7 @@ console.log(date,"date.now")
 // plus 5 days
 date += 5 * 86400000
 const stringWeekDayDate = new Date(date).toString().split(' ')[0]
+let aulaId = ''
 let aulaUrls = []
 // get day aulas
 let config = {
@@ -42,7 +43,16 @@ axios.request(config)
  console.log(aulaUrls,"List aulas")
  console.log(stringWeekDayDate,"week day");
  //${aulaUrls[0] first class of the day
- const aulaId = stringWeekDayDate === 'Thu' ? aulaUrls[5] : aulaUrls[9]
+ switch(stringWeekDayDate) {
+   case 'Thu':
+     aulaId = aulaUrls[5]
+     break;
+   case 'Sat':
+     aulaId = aulaUrls[3]
+     break;
+   default:
+     aulaId = aulaUrls[9]
+ }
  console.log(aulaId)
  let configBook = {
    method: 'get',
