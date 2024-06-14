@@ -54,9 +54,14 @@ axios.request(config)
      break;
    case 'Tue':
      aulaId = aulaUrls[0]
-     break;
-   default:
+   case 'Wed':
      aulaId = aulaUrls[9]
+     break;
+   case 'Mon':
+        aulaId = aulaUrls[9]
+        break;
+   default:
+     aulaId = 'undefined'
  }
  console.log(aulaId)
  if (aulaId === undefined){
