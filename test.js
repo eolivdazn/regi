@@ -2,10 +2,12 @@ const axios = require('axios');
 
 // user Auth
 const auth = process.env.AUTH
+const daysInAdvance = process.env.DAYS || 5
 let date = Date.now();
 console.log(date,"date.now")
+console.log(daysInAdvance,"daysInAdvance")
 // plus 5 days
-date += 5 * 86400000
+date +=  daysInAdvance * 86400000
 const stringWeekDayDate = new Date(date).toString().split(' ')[0]
 let aulaId = ''
 let aulaUrls = []
@@ -41,7 +43,7 @@ axios.request(config)
      aulaUrls.push(match[1]);
  }
  console.log(aulaUrls,"List aulas")
- console.log(stringWeekDayDate,"week day");
+ console.log("Inscricao",stringWeekDayDate,"week day");
  //${aulaUrls[0] first class of the day
  switch(stringWeekDayDate) {
    case 'Thu':
@@ -49,6 +51,9 @@ axios.request(config)
      break;
    case 'Sat':
      aulaId = aulaUrls[3]
+     break;
+   case 'Tue':
+     aulaId = aulaUrls[0]
      break;
    default:
      aulaId = aulaUrls[9]
