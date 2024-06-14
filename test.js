@@ -59,6 +59,9 @@ axios.request(config)
      aulaId = aulaUrls[9]
  }
  console.log(aulaId)
+ if (aulaId === undefined){
+    process.exit()
+ }
  let configBook = {
    method: 'get',
    maxBodyLength: Infinity,
@@ -80,14 +83,14 @@ axios.request(config)
      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
    }
  };
-// axios.request(configBook)
-// .then((response) => {
-//   console.log(JSON.stringify(response.data));
-// })
-// .catch((error) => {
-//   console.log(error);
-// });
-
+ console.log("inscricao..")
+ axios.request(configBook)
+ .then((response) => {
+   console.log(JSON.stringify(response.data));
+ })
+ .catch((error) => {
+   console.log(error);
+ });
 })
 .catch((error) => {
   console.log(error);
