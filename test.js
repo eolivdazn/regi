@@ -60,6 +60,7 @@ axios.request(config)
  }
  console.log(aulaId)
  if (aulaId === undefined){
+    console.log("nao existe aula para inscrever")
     process.exit()
  }
  let configBook = {
